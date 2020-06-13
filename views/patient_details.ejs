@@ -1,0 +1,26 @@
+<%- include('partials/header.ejs') %>
+
+<!-- iterate through list of articles -->
+<div class="container">
+    <br>
+    <ul class="list-group">
+        
+        <li class="list-group-item">Name: <%= patient.fname %> <%= patient.lname %></li>
+        <li class="list-group-item">Gender: <%=patient.gender %></li>
+    
+        <li class="list-group-item">DOB: <%= patient.birthdate.getDate()+'/'+ patient.birthdate.getMonth()+'/'+patient.birthdate.getFullYear()%>  </li>
+        <li class="list-group-item">Address: <%= patient.address %></li>
+        <li class="list-group-item">Phone: <%= patient.phone %></li>
+        <li class="list-group-item">Balance: <%=patient.payments %></li>
+       
+    </ul>
+    <br>
+    <a class="btn btn-primary" role="button" href="/patients/payments/<%=patient._id %>">Add payment</a>
+    <div class="float-right">
+    <a class="btn btn-outline-dark" role="button" href="/patients/edit/<%=patient._id %>">Edit patient</a>
+    <a class="btn btn-outline-danger" role="button" href="/patients/delete/<%=patient._id %>">Delete patient</a>
+    </div>
+    
+   
+</div>
+<%- include('partials/footer.ejs') %> 

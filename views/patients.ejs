@@ -1,0 +1,15 @@
+<%- include('partials/header.ejs') %>
+
+<!-- iterate through list of patients -->
+<div class="container">
+    <br>
+    <h3>Patient list</h3>
+<ul class="list-group">
+    <% patients.forEach(element => { %>
+        <li class="list-group-item"><a href="/patients/<%=element._id %>"> <%= element.fname %> <%= element.lname %></a> </li>
+    <% }); %> 
+</ul>
+<br>
+<a class="btn btn-primary float-right" role="button" href="/patients/add">Add new patient</a>
+</div>
+<%- include('partials/footer.ejs') %>

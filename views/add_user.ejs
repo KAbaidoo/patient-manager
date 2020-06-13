@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title> <%= title %></title>
+      <link rel='stylesheet' href='/bower_components/bootstrap/dist/css/bootstrap.css'>
+  </head>
+  <body>
+  <div class="container">
+    <div class="container">
+        <% if (errors) { %>
+          <ul class="alert alert-danger">
+              <% errors.forEach(element => { %>
+                  <li><%= element.msg %></li>
+              <% }); %>
+          </ul>
+      <% } else { %>
+          <p class="alert <%=message.class %>"><%= message.msg %> %></p>
+        <% }; %>
+      </div>
+    <h3><%= title %></h3>
+    <form action="/signup" method="POST">
+        <div class="form-group">
+            <label for="fname">First name:</label>
+            <input type="text" class="form-control" id="fname" name="fname"> 
+        </div>
+        <div class="form-group">
+            <label for="lname">Last name:</label>
+            <input type="text" class="form-control" id="lname" name="lname"> 
+        </div>
+        <div class="form-group">
+            <label for="email">Email Address:</label>
+            <input class="form-control" id="email" name="email" rows="3"></input>
+        </div>
+        <div class="form-group">
+            <label for="psswd">Password:</label>
+            <input type="password" class="form-control" id="psswd" name="password"> 
+        </div>
+        <button type="submit" class="btn btn-primary pl-4 pr-4 ">Save </button>
+        <a class="btn btn-secondary ml-3" role="button" href="/">Cancel</a>
+    </form>
+    </div>
+
+<%- include('partials/footer.ejs') %> 

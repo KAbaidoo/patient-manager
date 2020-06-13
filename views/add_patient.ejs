@@ -1,0 +1,36 @@
+<%- include('partials/header.ejs') %>
+<div class="container">
+    <br>
+    <h3><%= title %></h3>
+    <form action="/patients/add" method="POST">
+        <div class="form-group">
+            <label for="fname">First name:</label>
+            <input type="text" class="form-control" id="fname" name="fname"> 
+        </div>
+        <div class="form-group">
+            <label for="lname">Last name:</label>
+            <input type="text" class="form-control" id="lname" name="lname"> 
+        </div>
+        <div class="form-group">
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="male">Male</label><br>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Female</label><br>
+        </div>
+        <div class="form-group">
+            <label for="birthdate">Date of birth:</label>
+            <input type="date" id="birthdate" name="birthdate">
+        </div>
+        <div class="form-group">
+            <label for="address">Residential Address:</label>
+            <textarea class="form-control" id="address" name="address" rows="3"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="phone">Phone:</label>
+            <input type="text" class="form-control" id="hone" name="phone"> 
+        </div>
+        
+        <button type="submit" class="btn btn-primary pl-4 pr-4"> Save </button>
+    </form>
+</div>
+<%- include('partials/footer.ejs') %> 
