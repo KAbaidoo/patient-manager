@@ -8,6 +8,7 @@ Before transitioning into tech I worked in healthcare, this was my motivation to
 
 ## Installation
 
+- Make sure you have [NodeJS](https://nodejs.org/en/) and [MongoDB](https://www.mongodb.com/) installed.
 - Clone the repository
 
 ```
