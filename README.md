@@ -1,32 +1,44 @@
-# Patient Management System
-
-A fully functional application for managing patient information at a clinic.
+# Health App
 
 ## Description
+A web application for managing patient records.
 
-Before transitioning into tech I worked in healthcare, this was my motivation to create this application for managing patient information. Technologies used include [MongoDB](https://www.mongodb.com/), [NodeJS](https://nodejs.org/en/), [ExpressJS](https://expressjs.com/), [Bootstrap](https://getbootstrap.com/) and [EJS](https://ejs.co/). The application includes validation for users.
+## Features
+*   User registration and sign-in
+*   Add new patients
+*   View patient details
+*   Edit patient information
+*   Delete patients
+*   Manage patient payments
 
-## Installation
+## Technologies Used
+*   Node.js
+*   Express
+*   MongoDB (with Mongoose)
+*   EJS (Embedded JavaScript templates)
+*   Body-parser
+*   Express-validator
+*   Bootstrap (via Bower)
+*   jQuery (via Bower)
 
-- Make sure you have [NodeJS](https://nodejs.org/en/) and [MongoDB](https://www.mongodb.com/) installed.
-- Clone the repository
+## Setup and Installation
+1.  Clone the repository.
+2.  Install Node.js and MongoDB if not already installed.
+3.  Navigate to the project directory.
+4.  Install project dependencies: `npm install`
+5.  Install front-end dependencies: `bower install` (Make sure Bower is installed globally: `npm install -g bower`)
+6.  Ensure your MongoDB server is running. The application connects to `mongodb://localhost:27017/health-app`.
+7.  Start the application: `npm start` or `npm run devstart` (for development with nodemon).
+8.  Access the application at `http://localhost:4000`.
 
-```
-npm install
-npm start
-```
+## Project Structure
+*   `app.js`: Main application file containing server setup, routes, and middleware.
+*   `models/`: Contains data schemas for MongoDB (e.g., `patients.js`, `users.js`).
+*   `public/`: Static assets like images, stylesheets, and client-side JavaScript (including `bower_components`).
+*   `views/`: EJS templates for rendering HTML pages.
 
-- Access on `http://localhost:4000`
+## Contributing
+Contributions are welcome. Please open an issue or submit a pull request.
 
-## Usage
-
-- The system requires users to be register and log in before usage.
-- A new patient can be registered with basic information.
-- Upon selecting the patient from a list, more information about the patient become visible.
-- A user can edit patient information.
-- A user can add payments made by a patient.
-
-## Further Work
-
-- More fields can be added to store more patient information.
-- Implement proper dialog messages.
+## License
+This project is licensed under the ISC License.
